@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Web Audio Visualizer</title>
+	<link href="styles/main.css" type="text/css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Diplomata' rel='stylesheet'>
+	
+	<script src="scripts/utilities.js"></script>
+	<script src="scripts/main.js"></script>
+	<script src="scripts/loader.js"></script>
+</head>
+<body>
+<h1>Bob Ross Audio Visualizer</h1>
+
+<canvas id="canvas" width="1200" height="650"></canvas>
+
+<div id="controls">
+
+	<div id="track">
+		<label>Track: </label>
+			<select id="trackSelect" >
+				<option value="media/The Joy of Painting.mp3">The Joy of Painting</option>
+				<option value="media/The Picard Song.mp3">The Picard Song</option>
+				<option value="media/New Adventure Theme.mp3">New Adventure Theme</option>
+			</select>
+	</div>	
+	
+	<audio controls loop ></audio>
+	
+	<p id="nowPlaying">The current Track.</p>		
+	
+		<hr>
+		
+	<div>
+		<h3>Audio</h3>
+		<p>
+			<input type="checkbox" id="highshelfCB"><label for="highshelfCB">Highshelf Filter (Treble)</label>			
+			<input type="range" id="highGainSlider" min="0" max="30" value="15" step="1">
+			<label id="highFilterLabel">15</label><br>
+			
+			<input type="checkbox" id="lowshelfCB"><label for="lowshelfCB">Lowshelf Filter (Bass)</label>
+			<input type="range" id="lowGainSlider" min="0" max="30" value="15" step="1">
+			<label id="lowFilterLabel">15</label><br>
+
+			<label for="checkbox6">Data Format</label>
+			<select id="formStyleChooser">
+				<option value="frequency" selected>Frequency</option>
+				<option value="waveform">Waveform</option>
+    		</select>
+			
+		</p>
+	</div>
+	
+		<hr>
+	
+	<div>
+		<h3>Visuals</h3>
+		<input type="checkbox" id="checkbox1">
+		<label for="checkbox1">Tint</label>
+			<select id="tintStyleChooser">
+				<option value="red" selected>Red</option>
+				<option value="green">Green</option>
+        		<option value="blue">Blue</option>
+    		</select>
+		<label>|</label>
+		<input type="checkbox" id="checkbox2">
+		<label for="checkbox2">Invert | </label>
+		<input type="checkbox" id="checkbox3">
+		<label for="checkbox3">Noise</label>
+		<br>
+		<input type="checkbox" id="checkbox4" checked>
+		<label for="checkbox4"> Bars </label>
+			<select id="barStyleChooser">
+				<option value="red">Red</option>
+				<option value="green">Green</option>
+        		<option value="blue">Blue</option>
+				<option value="purple">Purple</option>
+				<option value="yellow">Yellow</option>
+				<option value="black">Black</option>
+				<option value="white" selected>White</option>
+    		</select>
+					<label>|</label>
+		<input type="checkbox" id="checkbox5" checked>
+		<label for="checkbox5"> Lines</label>
+			<select id="lineStyleChooser">
+				<option value="red">Red</option>
+				<option value="green">Green</option>
+        		<option value="blue">Blue</option>
+				<option value="purple">Purple</option>
+				<option value="yellow">Yellow</option>
+				<option value="black">Black</option>
+				<option value="white" selected>White</option>
+    		</select>	
+
+					<label>|</label>
+		<input type="checkbox" id="checkbox6">
+		<label for="checkbox6"> Curves</label>
+			<select id="curveStyleChooser">
+				<option value="red">Red</option>
+				<option value="green">Green</option>
+        		<option value="blue">Blue</option>
+				<option value="purple">Purple</option>
+				<option value="yellow">Yellow</option>
+				<option value="black">Black</option>
+				<option value="white" selected>White</option>
+    		</select>			
+			<br>
+			
+			<label>Background</label>
+			<select id="backgroundStyleChooser">
+				<option value="red">Red</option>
+				<option value="green">Green</option>
+        		<option value="blue">Blue</option>
+				<option value="purple">Purple</option>
+				<option value="yellow">Yellow</option>
+				<option value="black">Black</option>
+				<option value="white">White</option>
+				<option value="rainbow">Rainbow</option>
+				<option value="paint1" selected>Island in the wilderness</option>
+				<option value="paint2">Campfire</option>
+				<option value="paint3">Snowpeaks by the Lake</option>
+    		</select>
+			
+			<br>
+			
+					<label>|</label>
+					
+		<input type="checkbox" id="checkbox7">
+		<label for="checkbox7"> Circles</label>
+			<select id="circleStyleChooser">
+				<option value="red">Red</option>
+				<option value="green">Green</option>
+        		<option value="blue">Blue</option>
+				<option value="purple">Purple</option>
+				<option value="yellow">Yellow</option>
+				<option value="black">Black</option>
+				<option value="white" selected>White</option>
+    		</select>	
+			<label>Radius:</label>
+			<input type="range" id="circleRadiusSlider" min="0" max="10" value="5" step=".2">
+			<label id="circleRadiusLabel">5</label>			
+		
+	</div>
+	
+	<hr>
+	
+	<div>
+		<h3>Icon</h3>
+		
+			<form action="maybe">
+			<input type="radio" name="icon" id="showBobRadio">Bob<br>
+			<input type="radio" name="icon" id="showRainBobRadio">RainBob<br>
+			<input type="radio" name="icon" id="showWindowBobRadio" checked>Window Bob<br>
+			<input type="radio" name="icon" id="showNoBobRadio">No Bob<br>
+			</form>		
+	</div>
+	
+		<hr>	
+	
+	
+	<button id="fullscreen">Go Full Screen</button><br>
+	
+
+	
+</div>
+</body>
+</html>

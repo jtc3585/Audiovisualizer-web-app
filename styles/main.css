@@ -1,0 +1,76 @@
+body {
+		background: #abdcf1;
+	}
+	
+	h1 {
+		font-size: 4em;
+		font-family: 'Diplomata';
+		color: #353337;
+		text-align: center;
+		background: rgba(0, 0, 255, .4);
+		margin-left: auto;
+		margin-right:auto;
+		display:block;
+	}	
+	
+	h3 {
+		font-family: 'Diplomata';
+	}
+	
+	canvas {
+		background: #fff;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		box-shadow: 5px 5px 5px black;
+	}
+	
+	#controls {
+		background: #fff;
+		box-shadow: 5px 5px 5px black;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		margin-top:35px;
+		width: 600px;
+		height: 700px;
+		padding: 4px;
+		text-align: center;
+	}	
+	
+	audio {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 5px;
+		margin-bottom: 15px;
+		display: block;
+	}
+
+	#track {
+		padding: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		text-align: center;
+		
+	}
+
+
+	#fullscreen {
+		padding: 5px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top:15px;
+		display: block;
+		text-align: center;
+		
+	}
+
+	#nowPlaying{
+		padding: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		text-align: center;
+		
+	}
